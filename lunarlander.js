@@ -1,6 +1,5 @@
  // Ufo
   function ufo(x, y) {
-    strokeWeight(4);
     translate(x,y);
     fill(0,0,0);
     triangle(x,y+50,x-50,y+110,x+50,y+110);
@@ -18,9 +17,7 @@
      rect(350,350, 10,10);
     }
 
-   function draw(){
-    flag();
-   }
+
     function moon(){
    fill(100,100,100);
    rect(0,350, 1000,200);
@@ -58,12 +55,11 @@
     ellipse(450, 300, 5,5);
 
   
-    // moon
+    // moon, surface
     fill(100,100,100);
    rect(0,350, 1000,200);
   }
   
-  // Screens
   // Menu screen
   function menuScreen() {
     scenery();
@@ -97,7 +93,7 @@
     }
   }
   
-  // You win screen
+  // win screen
   function youWinScreen() {
     scenery();
     ufo(100, 120);
@@ -106,6 +102,16 @@
     text("YOU DID IT!", 100, 100);
     textSize(24);
     text("Click to restart the game", 100, 200);
+
+    //flag
+    noStroke();
+    fill(255,255,255);
+    rect(-50,100,10,130);
+    fill(0,0,255);
+    rect(-40,100,70,50);
+    fill(255,255,0);
+    rect(-25,100,10,50);
+    rect(-40,120,70,10);
   }
   //start
   function mouseClicked() {
@@ -128,7 +134,6 @@
   
     ufoY = ufoY + velocity;
   
-    // When spacebar is down, velocity slows down, otherwise increases
     if (keyIsDown(32)) {
       ufo(100, ufoY);
       velocity = velocity - 0.2;
