@@ -1,3 +1,7 @@
+ function setup(){
+  createCanvas(500,500);
+ }
+ 
  // Ufo
   function ufo(x, y) {
     translate(x,y);
@@ -16,7 +20,6 @@
     function flag(){
      rect(350,350, 10,10);
     }
-
 
     function moon(){
    fill(100,100,100);
@@ -57,7 +60,7 @@
   
     // moon, surface
     fill(100,100,100);
-   rect(0,350, 1000,200);
+   rect(0,350, 1000,400);
   }
   
   // Menu screen
@@ -66,8 +69,8 @@
     fill(255, 170, 50);
     textSize(20);
     text("CLICK TO START GAME", 20, 100);
-    textSize(24);
-    text("Use the spacebar to slow down the speed", 565, 300);
+    textSize(15);
+    text("use spacebar to slow down the ufo", 20, 150);
   }
 
   
@@ -113,6 +116,7 @@
     rect(-25,100,10,50);
     rect(-40,120,70,10);
   }
+  
   //start
   function mouseClicked() {
     if (screen === 0 || screen == 3 || screen == 2) {
